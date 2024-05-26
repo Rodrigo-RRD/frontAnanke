@@ -1,0 +1,227 @@
+body {
+    margin: 0px;
+    display: flex;
+}
+
+.sidebar {
+    background-color: #2980b5;
+    width: 220px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    flex-shrink: 0;
+    position: fixed;
+}
+
+.logo {
+    width: 156px;
+    height: 61px;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #f9fdff;
+    text-decoration: none;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+.listalinks {
+    width: 70%;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lista {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    padding: 12px;
+    border-radius: 20px;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.lista:hover {
+    background-color: #1a6f99;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.lista img {
+    margin-right: 10px;
+}
+
+.conteudo {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 20px;
+    width: calc(100% - 220px);
+    margin-left: 220px;
+
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.home img {
+    margin-right: 10px;
+}
+
+.home a {
+    color: #1a6f99;
+}
+
+.conteudo-principal {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.conteudo-principal img {
+    max-width: 100%;
+    height: auto;
+    padding: 0px;
+}
+
+.atividade {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+
+.calendario {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.chat {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.teste {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 1024px) {
+    .conteudo {
+        width: 100%;
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .conteudo-principal {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .atividade,
+    .teste,
+    .calendario,
+    .chat {
+        grid-column: 1 / 2;
+        grid-row: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 60px;
+    }
+
+    .conteudo {
+        width: 100%;
+        margin-left: 60px;
+        padding: 10px;
+    }
+
+    .logo,
+    .lista img {
+        display: none;
+    }
+
+    .lista a {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px 0;
+    }
+
+    .conteudo {
+        width: 100%;
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .conteudo-principal {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 10px;
+    }
+
+    .home {
+        order: -1;
+        width: 100%;
+        justify-content: center;
+        margin: 10px 0;
+    }
+
+    .home a {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .atividade,
+    .teste,
+    .calendario,
+    .chat {
+        grid-column: 1 / 2;
+        grid-row: auto;
+    }
+}
+
+/* Estilos para o botão */
+.btn-top-center {
+    position: fixed;
+    /* Define a posição fixa */
+    top: 20px;
+    /* Define a distância do topo */
+    left: 50%;
+    /* Define a posição no centro horizontal */
+    transform: translateX(-50%);
+    /* Centraliza o botão horizontalmente */
+    background-color: #007bff;
+    /* Cor de fundo azul */
+    color: #fff;
+    /* Cor do texto branca */
+    padding: 10px 20px;
+    /* Espaçamento interno do botão */
+    border: none;
+    /* Remove a borda */
+    border-radius: 5px;
+    /* Borda arredondada */
+    cursor: pointer;
+    /* Cursor do mouse ao passar sobre o botão */
+    z-index: 9999;
+    /* Z-index alto para garantir que fique acima de outros elementos */
+}

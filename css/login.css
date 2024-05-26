@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    background-color: #2980b5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    width: 426px;
+    height: 540px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    display: flex;
+}
+
+.criarConta {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    /* Adiciona algum espaçamento interno */
+}
+
+.criarConta img {
+    width: 269px;
+    height: 87px;
+    margin-bottom: 20px;
+}
+
+.criarConta h1 {
+    font-size: 32px;
+    color: #2980b7;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.criarConta p {
+    font-size: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.criarConta input {
+    display: block;
+    width: 300px;
+    height: 30px;
+    padding: 10px;
+    background-color: #efeeee;
+    outline: none;
+    border: none;
+    margin-bottom: 10px;
+    /* Espaçamento abaixo dos inputs */
+    border-radius: 10px;
+}
+
+.criarConta input::placeholder {
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+.criarConta button {
+    font-weight: bold;
+    background-color: #2980b7;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    transition: all 0.2s;
+    width: 120px;
+    height: 50px;
+    margin-top: 20px;
+    /* Espaçamento acima do botão */
+    border: none;
+}
+
+.criarConta button:hover {
+    background-color: #1c6090;
+    /* Efeito hover no botão */
+}
+
+.inputEmail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.inputSenha {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.inputs a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #293e4f;
+}

@@ -1,0 +1,114 @@
+/* Contêiner para os cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Alinha os cards ao centro horizontalmente */
+    gap: 20px;
+    /* Espaçamento entre os cards */
+    margin-top: 130px;
+    margin-left: 200px;
+    /* Adiciona uma margem à esquerda para separar os cards da barra lateral */
+    margin-right: 20px;
+    /* Adiciona uma margem à direita para separar os cards da borda da tela */
+}
+
+/* Estilo geral dos cards */
+.cardN0,
+.cardN1,
+.cardN2,
+.cardN3 {
+    color: #000;
+    margin: 6px;
+    /* Espaçamento interno dos cards */
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra */
+    background-color: #fff;
+    /* Cor de fundo */
+    border-radius: 30px;
+    /* Borda arredondada */
+    flex: 1 1 auto;
+    /* Os cards têm a mesma largura */
+    max-width: calc(50% - 20px);
+    /* Largura máxima de 50% menos a margem */
+}
+
+/* Estilo específico para o cardN0 */
+.cardN0 {
+    max-width: 600px;
+    /* Largura máxima */
+    flex: 1 1 100%;
+    /* Ocupa toda a largura na linha */
+    margin-left: 50px;
+    /* Remove a margem esquerda para manter a distância da sidebar */
+}
+
+/* Estilo específico para os cardsN1, cardN2 e cardN3 */
+.cardN1,
+.cardN2,
+.cardN3 {
+    max-width: 400px;
+    /* Largura máxima */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+
+    /* Cards ocupam toda a largura em telas menores */
+    .cardN1,
+    .cardN2,
+    .cardN3 {
+        width: 100%;
+        /* Define a largura como 100% */
+        max-width: none;
+        /* Remove a largura máxima */
+    }
+}
+
+@media (max-width: 750px) {
+
+    /* Reduz o tamanho máximo dos cartões quando a tela for menor que 768px */
+    .cardN1,
+    .cardN2,
+    .cardN3 {
+        max-width: calc(50% - 20px);
+        /* Largura máxima de 50% menos a margem */
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Reduz ainda mais o tamanho máximo dos cartões quando a tela for menor que 480px */
+    .cardN1,
+    .cardN2,
+    .cardN3 {
+        max-width: calc(100% - 20px);
+        /* Largura máxima igual à largura da tela menos a margem */
+    }
+}
+
+
+
+.img-card0,
+.img-card1,
+.img-card2,
+.img-card3 {
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    width: 100%;
+    /* Faz a imagem ocupar toda a largura do contêiner */
+    height: 100%;
+    /* Faz a imagem ocupar toda a altura do contêiner */
+}
+
+.textCard {
+    margin: 10px;
+    text-align: justify;
+    font-size: small;
+}
+
+.card-text {
+    font-size: 14px;
+
+}
