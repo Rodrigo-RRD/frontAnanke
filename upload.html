@@ -12,15 +12,50 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <!-- Logo ananke pagina -->
     <link rel="shortcut icon" type="imagex/png" href="img/LogoBrancoAnanke.png" />
+    <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="/css/upload.css">
 </head>
 
 <body>
+    <section class="sidebar">
+        <img class="logo" src="/img/LogoBranco.svg" alt="LogoBranco" />
+        <div class="listalinks">
+            <div class="lista">
+                <img src="/icons/cronograma.svg" alt="" />
+                <a href="">Cronograma</a>
+            </div>
+            <div class="lista">
+                <img src="/icons/trabalhos.svg" alt="" />
+                <a href="">Trabalhos</a>
+            </div>
+            <div class="lista">
+                <img src="/icons/relatorios.svg" alt="" />
+                <a href="">Relatórios</a>
+            </div>
+            <div class="lista">
+                <img src="/icons/discussoes.svg" alt="" />
+                <a href="">Discussões</a>
+            </div>
+            <div class="lista">
+                <img src="/icons/gerencia.svg" alt="" />
+                <a href="">Gerência</a>
+            </div>
+            <div class="lista">
+                <img src="/icons/administracao.svg" alt="" />
+                <a href="">Admin</a>
+            </div>
+            <div class="lista">
+                <img src="/icons/ferramentas.svg" alt="" />
+                <a href="">Ferramentas</a>
+            </div>
+        </div>
+    </section>
+
 
     <!--  -->
     <div class="conteudo">
         <form class="area-upload">
-            <div class="drop_box">
+            <div id="dropBox" class="drop_box">
                 <svg width="246" height="140" viewBox="0 0 246 140" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <mask id="mask0_455_714" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0"
                         width="246" height="140">
@@ -34,8 +69,8 @@
                 </svg>
                 <h3>Arraste seu arquivo aqui</h3>
                 <p>Arquivos suportados: PDF, TEXT, DOC , DOCX</p>
-                <input type="file" accept=".doc,.docx,.pdf" id="fileID" style="display:none;" name="dados">
-                <button class="btn">Selecionar arquivo</button>
+                <input id="fileInput" type="file" accept=".doc,.docx,.pdf" id="fileID" style="display:none;" name="dados">
+                <button id="btnSelArquivo" class="btn">Selecionar arquivo</button>
             </div>
             <div class="area-dados">
                 <div class="input_container">
@@ -46,10 +81,24 @@
                     <p class="titulo">Descrição do projeto</p>
                     <textarea name="descricao_projeto" cols="40" rows="5"></textarea>
                 </div>
+
+                <div id="fileDetails" class="file-details">
+                    <img class="file-icon" id="file-icon" src="" alt="Ícone Arquivo"/>
+                    <div class="file-info">
+                        <span class="file-name"></span>
+                        <span class="file-size"></span>
+                    </div>
+                </div>
                 <input class="inputEnviar" type="submit" value="Enviar">
             </div>
         </form>
     </div>
+
+    <!-- Importação do JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Scripts utilizados nas mecânicas da página -->
+    <script src="javascript/upload.js"></script>
 
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

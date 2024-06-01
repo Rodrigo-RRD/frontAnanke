@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 /* Reset de margin e padding */
 * {
@@ -15,7 +14,7 @@ body {
     /* Removendo margem */
     padding: 0;
     /* Removendo preenchimento */
-}
+} 
 
 /* Estilo para a div conteúdo */
 .conteudo {
@@ -33,10 +32,10 @@ body {
 .area-upload {
     background-color: #ffffff;
     display: flex;
-    font-family: 'Poppins';
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
     border-radius: 15px;
     box-shadow: 1px 1px 15px #0000007F;
-    height: 60vh;
+    height: 70vh;
 }
 
 .area-dados {
@@ -71,6 +70,11 @@ body {
     margin-bottom: 20px;
     font-size: 12px;
     color: #a3a3a3;
+}
+
+.drop_box.dragover {
+    border-color: #2980B5;
+    background-color: #2980B522;
 }
 
 
@@ -117,7 +121,7 @@ body {
 
 .area-dados input {
     border: none;
-    padding: 10px;
+    padding: 10px 15px;
     border-radius: 50px;
     margin: 0;
     width: 100%;
@@ -154,4 +158,38 @@ body {
     /* Centraliza o botão */
     display: block;
     /* Assegura que o elemento se comporta como um bloco */
+    align-self: center;
+    margin-top: 20px !important;
 }
+
+.file-details {
+    display: none;
+    align-items: center;
+    padding: 10px;
+    max-width: 350px;
+    margin-top: 0px;
+    justify-content: space-between;
+    align-self: center;
+    color: #fff;
+}
+
+.file-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.file-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10px;
+}
+
+.file-name {
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 250px;
+}
+
