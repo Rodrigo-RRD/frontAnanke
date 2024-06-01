@@ -69,6 +69,51 @@ $(document).ready(function() {
     }
 //=================================================================================//
 
+//======= Funções e eventos relacionados ao envio das informações para a API =======//
 
+$('#btnEnviar').on('click', function(event) {
+    event.preventDefault();
+    const file = $('#fileInput')[0].files[0];
+    if (file) {
+        const formData = new FormData();
 
+        // Formatar a data no formato dd/MM/yyyy HH:mm:ss
+        const now = new Date();
+        const dataFormatada = now.toLocaleString('pt-BR', {
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit'
+        }).replace(',', '');
+
+        formData.append('arquivo', file);
+        formData.append('nome', $('#titulo_projeto').val());
+        formData.append('dataCriacao', dataFormatada);
+        formData.append('resumo', $('#descricao_projeto').val());
+
+        $.ajax({
+            url: 'http://localhost:8080/v1/documentos/salvar2',
+            type: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function(response) {
+                alert('Arquivo enviado com sucesso!');
+
+                // Redirecionando
+                window.location.replace("http://localhost:8080/v1/documentos");
+            },
+            error: function(xhr, status, error) {
+                alert('Erro ao enviar o arquivo.');
+                console.error(xhr, status, error);
+            }
+        });
+    } else {
+        alert('Por favor, selecione um arquivo primeiro.');
+    }
+});
+
+//==================================================================================//
 });
