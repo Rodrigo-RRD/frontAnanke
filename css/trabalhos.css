@@ -87,8 +87,6 @@
     }
 }
 
-
-
 .img-card0,
 .img-card1,
 .img-card2,
@@ -109,6 +107,74 @@
 }
 
 .card-text {
+    margin-block: 10px;
     font-size: 14px;
 
+}
+
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #E54C3C;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    /* Certifique-se de que o botão esteja acima de outros elementos */
+}
+
+.floating-button:hover {
+    background-color: #1c6090;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #2980b5;
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.pagination button {
+    background-color: #E54C3C;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.pagination button:hover {
+    background-color: #92625d;
+}
+
+.pagination button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.pagination span {
+    margin: 0 10px;
+}
+
+#currentPage {
+    display: none;
 }

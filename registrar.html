@@ -6,11 +6,9 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-    <!-- Bootstrap CSS v5.2.1 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-        <link rel="stylesheet" href="css/registrar.css">
+    <!-- Logo ananke pagina -->
+    <link rel="shortcut icon" type="imagex/png" href="img/LogoBrancoAnanke.png" />
+    <link rel="stylesheet" href="css/registrar.css">
 </head>
 
 <body>
@@ -19,7 +17,7 @@
         <div class="welcome">
             <h1>Bem-vindo<br />de volta!</h1>
             <p>Acesse sua conta agora mesmo</p>
-            <button>ENTRAR</button>
+            <a href="login.html" style="text-decoration: none;"><button>ENTRAR</button></a>
             <a href="">Esqueci minha senha</a>
         </div>
 
@@ -32,47 +30,30 @@
             <div class="inputs">
                 <div class="inputNome">
                     <span class="svg">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M15 4C13.9391 4 12.9217 4.39509 12.1716 5.09835C11.4214 5.80161 11 6.75544 11 7.75C11 8.74456 11.4214 9.69839 12.1716 10.4017C12.9217 11.1049 13.9391 11.5 15 11.5C16.0609 11.5 17.0783 11.1049 17.8284 10.4017C18.5786 9.69839 19 8.74456 19 7.75C19 6.75544 18.5786 5.80161 17.8284 5.09835C17.0783 4.39509 16.0609 4 15 4ZM15 5.78125C15.2758 5.78125 15.5489 5.83217 15.8036 5.93111C16.0584 6.03005 16.2899 6.17507 16.4849 6.35788C16.6799 6.5407 16.8346 6.75773 16.9401 6.99659C17.0457 7.23545 17.1 7.49146 17.1 7.75C17.1 8.00854 17.0457 8.26455 16.9401 8.50341C16.8346 8.74227 16.6799 8.9593 16.4849 9.14212C16.2899 9.32493 16.0584 9.46995 15.8036 9.56889C15.5489 9.66783 15.2758 9.71875 15 9.71875C14.7242 9.71875 14.4511 9.66783 14.1964 9.56889C13.9416 9.46995 13.7101 9.32493 13.5151 9.14212C13.3201 8.9593 13.1654 8.74227 13.0599 8.50341C12.9543 8.26455 12.9 8.00854 12.9 7.75C12.9 7.22785 13.1212 6.7271 13.5151 6.35788C13.9089 5.98867 14.443 5.78125 15 5.78125ZM4 6.8125V9.625H1V11.5H4V14.3125H6V11.5H9V9.625H6V6.8125H4ZM15 12.4375C12.33 12.4375 7 13.6844 7 16.1875V19H23V16.1875C23 13.6844 17.67 12.4375 15 12.4375ZM15 14.2188C17.97 14.2188 21.1 15.5875 21.1 16.1875V17.2188H8.9V16.1875C8.9 15.5875 12 14.2188 15 14.2188Z"
-                                fill="#9C9C9C" />
-                        </svg>
+                        <img src="icons/user.svg" alt="" class="svgIconeUser">
                     </span>
-
-                    <input placeholder="Nome" type="name" class="user" />
+                    <input placeholder="Nome" type="text" class="user" />
                 </div>
 
                 <div class="inputEmail">
-                    <span>
-                        <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M20 2C20 0.9 19.1 0 18 0H2C0.9 0 0 0.9 0 2V14C0 15.1 0.9 16 2 16H18C19.1 16 20 15.1 20 14V2ZM18 2L10 7L2 2H18ZM18 14H2V4L10 9L18 4V14Z"
-                                fill="#9C9C9C" />
-                        </svg>
+                    <span class="svg">
+                        <img src="icons/email.svg" alt="" class="svgIconeEmail">
                     </span>
                     <input placeholder="Email" type="email" class="email" />
                 </div>
                 <div class="inputSenha">
-                    <span>
-                        <svg width="16" height="21" viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M8 16C7.46957 16 6.96086 15.7893 6.58579 15.4142C6.21071 15.0391 6 14.5304 6 14C6 12.89 6.89 12 8 12C8.53043 12 9.03914 12.2107 9.41421 12.5858C9.78929 12.9609 10 13.4696 10 14C10 14.5304 9.78929 15.0391 9.41421 15.4142C9.03914 15.7893 8.53043 16 8 16ZM14 19V9H2V19H14ZM14 7C14.5304 7 15.0391 7.21071 15.4142 7.58579C15.7893 7.96086 16 8.46957 16 9V19C16 19.5304 15.7893 20.0391 15.4142 20.4142C15.0391 20.7893 14.5304 21 14 21H2C1.46957 21 0.960859 20.7893 0.585786 20.4142C0.210714 20.0391 0 19.5304 0 19V9C0 7.89 0.89 7 2 7H3V5C3 3.67392 3.52678 2.40215 4.46447 1.46447C5.40215 0.526784 6.67392 0 8 0C8.65661 0 9.30679 0.129329 9.91342 0.380602C10.52 0.631876 11.0712 1.00017 11.5355 1.46447C11.9998 1.92876 12.3681 2.47995 12.6194 3.08658C12.8707 3.69321 13 4.34339 13 5V7H14ZM8 2C7.20435 2 6.44129 2.31607 5.87868 2.87868C5.31607 3.44129 5 4.20435 5 5V7H11V5C11 4.20435 10.6839 3.44129 10.1213 2.87868C9.55871 2.31607 8.79565 2 8 2Z"
-                                fill="#9C9C9C" />
-                        </svg>
+                    <span class="svg">
+                        <img src="icons/cadeado.svg" alt="" class="svgIconeCadeado">
                     </span>
                     <input placeholder="Senha" type="password" class="cadeado" />
                 </div>
             </div>
-            <button>Cadastrar</button>
+            <a href="landingpage.html" style="text-decoration: none;"><button>Cadastrar</button></a>
         </div>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
 </body>
 

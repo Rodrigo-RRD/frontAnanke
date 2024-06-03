@@ -13,13 +13,14 @@
     <!-- Logo ananke pagina -->
     <link rel="shortcut icon" type="imagex/png" href="img/LogoBrancoAnanke.png" />
     <link rel="stylesheet" href="css/sidebar.css">
-    <link rel="stylesheet" href="css/cardsTrabalhos.css">
+    <link rel="stylesheet" href="css/trabalhos.css">
 </head>
 
 <body>
 
-    <section class="sidebar">
-        <img class="logo" src="/img/LogoBranco.svg" alt="LogoBranco" />
+    <!-- SideBar -->
+    <section class="sidebar"><a href="/landingpage.html">
+        <img class="logo" src="/img/LogoBranco.svg" alt="LogoBranco" /></a>
         <div class="listalinks">
             <div class="lista">
                 <img src="/icons/cronograma.svg" alt="" />
@@ -52,12 +53,19 @@
         </div>
     </section>
 
-    <!-- <button class="novo-projeto-btn responseMenu">
-        Novo Projeto
-    </button>
-    -->
+    <!-- Botao de adicionar novo projeto -->
+    <a href="/upload.html"><button class="floating-button">+</button></a>
 
+    <!-- Criar os cards de acordo com o projeto -->
     <div class="criarCards responseMenu card-container"></div>
+
+    <!-- Botoes de Paginacao -->
+    <div class="pagination">
+        <button id="btn-prev" class="btn btn-secondary mr-2" disabled>Anterior</button>
+        <a id="currentPage" style="display: none;"></a>
+        <span><span id="currentUsuario"></span> de <span id="totalPages"></span></span>
+        <button id="btn-next" class="btn btn-secondary ml-2" disabled>Próxima</button>
+    </div>
 
     <!-- Pasta JS -->
     <script src="javascript/apiconect.js" defer></script>

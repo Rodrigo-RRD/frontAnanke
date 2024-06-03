@@ -10,49 +10,15 @@
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
     <!-- Logo ananke pagina -->
     <link rel="shortcut icon" type="imagex/png" href="img/LogoBrancoAnanke.png" />
-    <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="/css/upload.css">
 </head>
 
 <body>
-    <section class="sidebar">
-        <img class="logo" src="/img/LogoBranco.svg" alt="LogoBranco" />
-        <div class="listalinks">
-            <div class="lista">
-                <img src="/icons/cronograma.svg" alt="" />
-                <a href="">Cronograma</a>
-            </div>
-            <div class="lista">
-                <img src="/icons/trabalhos.svg" alt="" />
-                <a href="/trabalhos.html">Trabalhos</a>
-            </div>
-            <div class="lista">
-                <img src="/icons/relatorios.svg" alt="" />
-                <a href="">Relatórios</a>
-            </div>
-            <div class="lista">
-                <img src="/icons/discussoes.svg" alt="" />
-                <a href="">Discussões</a>
-            </div>
-            <div class="lista">
-                <img src="/icons/gerencia.svg" alt="" />
-                <a href="">Gerência</a>
-            </div>
-            <div class="lista">
-                <img src="/icons/administracao.svg" alt="" />
-                <a href="">Admin</a>
-            </div>
-            <div class="lista">
-                <img src="/icons/ferramentas.svg" alt="" />
-                <a href="">Ferramentas</a>
-            </div>
-        </div>
-    </section>
-
-
-    <!--  -->
+    <img id="btnSair" src="icons/close.svg" alt="">
+    <!-- Upload -->
     <div class="conteudo">
         <form class="area-upload">
             <div id="dropBox" class="drop_box">
@@ -69,7 +35,8 @@
                 </svg>
                 <h3>Arraste seu arquivo aqui</h3>
                 <p>Arquivos suportados: PDF, TEXT, DOC , DOCX</p>
-                <input id="fileInput" type="file" accept=".doc,.docx,.pdf" id="fileID" style="display:none;" name="dados">
+                <input id="fileInput" type="file" accept=".doc,.docx,.pdf" id="fileID" style="display:none;"
+                    name="dados">
                 <button id="btnSelArquivo" class="btn">Selecionar arquivo</button>
             </div>
             <div class="area-dados">
@@ -83,23 +50,25 @@
                 </div>
 
                 <div id="fileDetails" class="file-details">
-                    <img class="file-icon" id="file-icon" src="" alt="Ícone Arquivo"/>
+                    <img class="file-icon iconesUploadImage" id="file-icon" />
+                    
                     <div class="file-info">
-                        <span class="file-name"></span>
+                        <span class="file-name"></span><br>
                         <span class="file-size"></span>
                     </div>
+                    <a href=""><img id="btnCancelar" style="display: none;" src="icons/closeUpload.svg"></a>
+                    
                 </div>
                 <input id="btnEnviar" class="inputEnviar" type="submit" value="Enviar">
+
             </div>
         </form>
     </div>
 
-    <!-- Importação do JQuery -->
+    <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Scripts utilizados nas mecânicas da página -->
-    <script src="javascript/upload.js"></script>
-
+    <!-- Upload.js -->
+    <script src="/javascript/upload.js" defer></script>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
