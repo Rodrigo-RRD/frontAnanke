@@ -201,10 +201,13 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 /* Estilo básico do botão */
 #btnSair {
-    color: #E54C3C; /* Cor do texto */
-    max-width: 80px; /* Largura máxima do botão */
+    color: #E54C3C;
+    /* Cor do texto */
+    max-width: 80px;
+    /* Largura máxima do botão */
     font-weight: bold;
     display: inline-block;
     margin: 10px;
@@ -212,29 +215,44 @@ body {
     font-size: 16px;
     color: #fff;
     border: none;
-    border-radius: 50%; /* Arredondamento do botão */
+    border-radius: 50%;
+    /* Arredondamento do botão */
     cursor: pointer;
 }
 
 #btnSair:hover {
     color: #a73c3c;
-    background-color: #9e9e9e; /* Cor de fundo do botão ao passar o mouse */
+    background-color: #9e9e9e;
+    /* Cor de fundo do botão ao passar o mouse */
 }
 
 /* Posicionamento absoluto no canto superior direito */
 #btnSair {
     position: absolute;
-    top: 10px;   /* Ajuste a posição vertical conforme necessário */
-    right: 10px; /* Ajuste a posição horizontal conforme necessário */
-    z-index: 1000; /* Assegura que o botão fique acima de outros elementos */
+    top: 10px;
+    /* Ajuste a posição vertical conforme necessário */
+    right: 10px;
+    /* Ajuste a posição horizontal conforme necessário */
+    z-index: 1000;
+    /* Assegura que o botão fique acima de outros elementos */
 }
 
 #btnSair img {
-    width: 200px; /* Tamanho da imagem dentro do botão */
+    width: 200px;
+    /* Tamanho da imagem dentro do botão */
 }
-#btnCancelar{
+
+#btnCancelar {
     margin-top: 8px;
     margin-left: 30px;
     background-color: none;
     width: 30px;
+}
+
+.selectStyle {
+    font-weight: bold;
+    background-color: #fff;
+    color: #2980B5;
+    border-radius: 35px;
+    border: none;
 }
