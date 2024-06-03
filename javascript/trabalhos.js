@@ -15,7 +15,7 @@ function consultarProjetoAPI(page) {
         },
         success: function (response) {
             criarLitaProjetos(response);
-        },error: function(jqXHR, textStatus, errorThrown) {
+        }, error: function (jqXHR, textStatus, errorThrown) {
             // Aqui você pode lidar com o erro da maneira que preferir
             console.error("Erro na requisição AJAX:", textStatus, errorThrown);
         }
@@ -32,6 +32,17 @@ function criarLitaProjetos(response) {
 
     $.each(projetos, function (b, projeto) {
 
+        var areaCC = {
+            "CIENCIAS_EXATAS_E_TERRA": "Ciências Exatas",
+            "CIENCIAS_DA_SAUDE": "Saúde",
+            "ENGENHARIAS": "Engenharias",
+            "CIENCIAS_BIOLOGICAS": "Ciencias Biologica",
+            "CIENCIAS_HUMANAS": "Ciencias Humanas",
+            "CIENCIAS_DA_COMPUTACAO_E_TECNOLOGIA_DA_INFORMACAO": "Ciência da Computação e Tecnologia da Informação",
+            "INTERDICIPLINAR": "Interdiciplinar",
+            "OUTRAS": "Outras áreas"
+        };
+
         var cards =
             $("<div>").addClass("containerCards").append(
                 $("<div>").addClass("cardN" + b).append(
@@ -41,8 +52,8 @@ function criarLitaProjetos(response) {
                             alt: "Image description"
                         }),
                         $("<div>").addClass("textCard").append(
-                            $("<h5>").addClass("textAreaConhecimento").text(projeto.areaConhecimento).append(
-                                $("<p>").addClass("card-text").text("Tema: " + projeto.tema),
+                            $("<h5>").addClass("textAreaConhecimento").text(projeto.nome).append(
+                                $("<p>").addClass("card-text").text("Área: " + areaCC[projeto.areaConhecimento]),
                                 $("<p>").addClass("card-text").text("Status: " + projeto.status.toLowerCase())
                             )))
                 ));

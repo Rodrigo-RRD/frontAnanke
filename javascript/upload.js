@@ -103,23 +103,24 @@ $(document).ready(function () {
                 minute: '2-digit',
                 second: '2-digit'
             }).replace(',', '');
-
+            var areaCC = $("campo-area-conhecimento");
             formData.append('arquivo', file);
+            formData.append('area', $("#campo-area-conhecimento").val());
             formData.append('nome', $('#titulo_projeto').val());
             formData.append('dataCriacao', dataFormatada);
             formData.append('resumo', $('#descricao_projeto').val());
 
             $.ajax({
-                url: 'http://localhost:8080/v1/documentos/salvar2',
+                url: 'http://localhost:8080/v1/documentos/salvar',
                 type: 'POST',
                 data: formData,
                 processData: false,
                 contentType: false,
                 success: function (response) {
+                    window.location.replace("http://127.0.0.1:5501/trabalhos.html");
                     alert('Arquivo enviado com sucesso!');
 
                     // Redirecionando
-                    window.location.replace("http://localhost:8080/v1/documentos");
                 },
                 error: function (xhr, status, error) {
                     alert('Erro ao enviar o arquivo.');

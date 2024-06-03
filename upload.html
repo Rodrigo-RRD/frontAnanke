@@ -45,20 +45,33 @@
                     <input id="titulo_projeto" type="text" name="titulo_projeto" autocomplete="off" />
                 </div>
                 <div class="input_container">
-                    <p class="titulo">Descrição do projeto</p>
+                    <p class="titulo">Tema do projeto</p>
                     <textarea id="descricao_projeto" name="descricao_projeto" cols="40" rows="5"></textarea>
                 </div>
-
                 <div id="fileDetails" class="file-details">
                     <img class="file-icon iconesUploadImage" id="file-icon" />
-                    
+
                     <div class="file-info">
                         <span class="file-name"></span><br>
                         <span class="file-size"></span>
                     </div>
                     <a href=""><img id="btnCancelar" style="display: none;" src="icons/closeUpload.svg"></a>
-                    
                 </div>
+                <!-- Lista de Areas -->
+                <select class="" id="campo-area-conhecimento">
+                    <!-- <option value="">Selecione a area</option> -->
+                    <option value="">Selecione a area de conhecimento</option>
+                    <option value="1">Ciências Exatas e da Terra</option>
+                    <option value="2">Saúde</option>
+                    <option value="3">Engenharias</option>
+                    <option value="4">Ciencias Biologica</option>
+                    <option value="5">Ciencias Humanas</option>
+                    <option value="6">Ciência da Computação e Tecnologia
+                        da Informação</option>
+                    <option value="7">Interdiciplinar</option>
+                    <option value="8">Outras áreas</option>
+                </select>
+
                 <input id="btnEnviar" class="inputEnviar" type="submit" value="Enviar">
 
             </div>
