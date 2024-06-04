@@ -5,7 +5,6 @@ $(document).ready(function () {
 });
 
 function consultarProjetoAPI(page) {
-
     $.ajax({
         url: "http://localhost:8080/v1/projetos/listar",
         type: "get",
@@ -55,7 +54,42 @@ function criarLitaProjetos(response) {
                             $("<h5>").addClass("textAreaConhecimento").text(projeto.nome).append(
                                 $("<p>").addClass("card-text").text("Área: " + areaCC[projeto.areaConhecimento]),
                                 $("<p>").addClass("card-text").text("Status: " + projeto.status.toLowerCase())
-                            )))
+                            ))).append(
+                                $("<div>").addClass("actionButtons").append(
+                                    $("<button>").addClass("btnDownload").addClass("btnDownload" + b).append(
+                                        $("<img>").addClass("imgDownload").attr(
+                                            {
+                                                src: "/icons/download.svg",
+                                                alt: "Botão download"
+                                            }
+                                        )
+                                    ).append(
+                                        $("<span>").addClass("tooltipDownload").text("Baixar Arquivo")
+                                    )
+                                ).append(
+                                    $("<button>").addClass("btnEditar").addClass("btnEditar" + b).append(
+                                        $("<img>").addClass("imgEditar").attr(
+                                            {
+                                                src: "/icons/edit.svg",
+                                                alt: "Botão editar"
+                                            }
+                                        )
+                                    ).append(
+                                        $("<span>").addClass("tooltipEditar").text("Editar Projeto")
+                                    )
+                                ).append(
+                                    $("<button>").addClass("btnExcluir").addClass("btnExcluir" + b).append(
+                                        $("<img>").addClass("imgExcluir").attr(
+                                            {
+                                                src: "/icons/trash.svg",
+                                                alt: "Botão excluir"
+                                            }
+                                        )
+                                    ).append(
+                                        $("<span>").addClass("tooltipExcluir").text("Excluir Projeto")
+                                    )
+                                )
+                            )
                 ));
 
         cards.appendTo(".criarCards");
