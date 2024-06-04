@@ -39,8 +39,8 @@ body {
 }
 
 .contact-support {
-    background-color: rgb(233, 233, 233);
-    color: red;
+    background-color: rgb(161, 161, 161);
+    color: rgb(255, 25, 25);
     grid-column: 1 / 2;
     grid-row: 1 / 2;
 }
@@ -101,16 +101,17 @@ body {
     max-width: 100px;
 }
 
-.arrow {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    font-size: 1.5em;
+.chatIconeImg {
+    max-width: 100px;
 }
 
 .icon {
     font-size: 3em;
     margin-top: 10px;
+}
+
+.setaDireitImg {
+    max-width: 35px;
 }
 
 /* Media Queries para responsividade */

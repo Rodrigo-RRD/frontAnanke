@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-.ferramentas-conteudo {
+.relatorios-conteudo {
     font-family: "Poppins", Arial, Helvetica, sans-serif;
     margin-top: 10%;
     display: flex;
@@ -27,6 +27,7 @@ contabody {
 }
 
 .grid-item {
+
     background-color: #fff;
     padding: 20px;
     text-align: center;
@@ -39,7 +40,11 @@ contabody {
     color: #fff;
 }
 
-.administrator {
+.turmaImgIcone {
+    max-width: 100px;
+}
+
+.turmas {
     background-color: #2980b5;
 }
 
@@ -61,52 +66,12 @@ contabody {
     font-size: 16px;
 }
 
-.hub-conhecimento .arrow {
-    font-size: 24px;
-    margin-top: 10px;
-}
-
-.discussoes {
+.orientador {
     background-color: #2980b5;
 }
 
 .meus-projetos {
     background-color: #E54C3C;
-}
-
-.discussoesIconeImg {
-    max-width: 100px;
-}
-
-.calendario-eventosImg {
-    max-width: 100px;
-}
-
-.hub-conhecimento-setaImg {
-    max-width: 60px;
-}
-
-.gerencia {
-    background-color: transparent;
-    position: relative;
-}
-
-.gerencia img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.gerencia span {
-    bottom: 20px;
-    left: 20px;
-    color: #E54C3C;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.gerenciaImg {
-    max-width: 50px;
 }
 
 /* Responsivo */

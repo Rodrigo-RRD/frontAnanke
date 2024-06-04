@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Administração</title>
+    <title>Cronogramas</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -10,7 +10,7 @@
     <!-- Logo ananke pagina -->
     <link rel="shortcut icon" type="imagex/png" href="img/LogoBrancoAnanke.png" />
     <link rel="stylesheet" href="css/sidebar.css">
-    <link rel="stylesheet" href="css/administracao.css">
+    <link rel="stylesheet" href="css/cronograma.css">
 </head>
 
 <body>
@@ -21,7 +21,7 @@
         <div class="listalinks">
             <div class="lista">
                 <img src="/icons/cronograma.svg" alt="" />
-                <a href="cronograma.html">Cronograma</a>
+                <a href="">Cronograma</a>
             </div>
             <div class="lista">
                 <img src="/icons/trabalhos.svg" alt="" />
@@ -37,7 +37,7 @@
             </div>
             <div class="lista">
                 <img src="/icons/gerencia.svg" alt="" />
-                <a href="">Gerência</a>
+                <a href="gerencia.html">Gerência</a>
             </div>
             <div class="lista">
                 <img src="/icons/administracao.svg" alt="" />
@@ -50,44 +50,128 @@
         </div>
     </section>
 
-    <div class="conteudo-adm">
-        <div class="container">
-            <div class="item contact-support">
-                <div><br>+ Suport</div>
-            </div>
-            <div class="item vincular-orientador">
-                <div>Vincular Orientador</div>
-                <div class="arrow">&rarr;</div>
-            </div>
-            <div class="item comunicados">
-                <div>Comunicados</div>
-                <div class="arrow">&rarr;</div>
-            </div>
-            <div class="item mural">
-                <div>Mural</div>
-                <div class="icon"><img class="muralImage" src="icons/aministracaoIncones/muralNews.svg" alt=""></div>
-            </div>
-            <div class="item alertas">
-                <div>Alertas</div>
-                <div class="arrow">&rarr;</div>
-            </div>
-            <div class="item banca">
-                <div>Banca</div>
-                <div class="arrow">&rarr;</div>
-            </div>
-            <div class="item area-conhecimento">
-                <div>Área de conhecimento</div>
-                <div class="icon"><img class="conhecimento-img" src="icons/aministracaoIncones/conhecimento.svg" alt="">
+    <main class="conteudo-cronogramas">
+        <div class="containerCronograma">
+            <div class="permissions">
+                <div>
+                    <h2 class="textTitulos">Permissões para User</h2>
+                    <p class="textTitulos">Id user: #71731273</p>
                 </div>
+                <ul class="subText">
+                    <li>Criação de novos usuários <input type="checkbox" checked></li>
+                    <li>Correção de artigos e TCC <input type="checkbox" checked></li>
+                    <li>Função de Supervisor <input type="checkbox" checked></li>
+                    <li>Função de Monitor <input type="checkbox"></li>
+                    <li>Desativar Usuários <input type="checkbox"></li>
+                    <li>Acesso ao chat exclusivo <input type="checkbox"></li>
+                </ul>
             </div>
-            <div class="item novos-concluintes">
-                <div>Novos Concluintes</div>
-                <div class="icon"><img class="concluintes-img" src="icons/aministracaoIncones/concluintes.svg" alt="">
-                </div>
+            <div class="user-list">
+                <h2 class="textTitulos">Lista de Usuários</h2>
+                <ul class="subText">
+                    <li>Daniel Gonçalves <span class="status ativo">Ativo</span></li>
+                    <li>Leonardo Marinheiro <span class="status ativo">Ativo</span></li>
+                    <li>Gabryel Borges <span class="status ativo">Ativo</span></li>
+                    <li>Guilherme Thomaz <span class="status ativo">Ativo</span></li>
+                    <li>Belligol <span class="status ativo">Ativo</span></li>
+                </ul>
+            </div>
+            <div class="calendar">
+                <h2 class="textTitulos">September</h2>
+                <table class="subText">
+                    <thead>
+                        <tr>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thu</th>
+                            <th>Fri</th>
+                            <th>Sat</th>
+                            <th>Sun</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="event-creation">
+                <h2 class="textTitulos">Criação de evento</h2>
+                <form class="subText">
+                    <label class="labelEvent" for="event-name">Nome: <input class="inputCriacaoEvents" type="text"
+                            id="event-name" name="event-name" value="P1"> </label>
+
+                    <label class="labelEvent" for="event-date">Data: <input class="inputCriacaoEvents"
+                            type="datetime-local" id="event-date" name="event-date" value="2023-11-29T21:40"></label>
+
+
+                    <label>Insira usuários que vão participar:</label>
+                    <ul>
+                        <li><input type="checkbox"> Daniel Gonçalves</li>
+                        <li><input type="checkbox"> Leonardo Marinheiro</li>
+                        <li><input type="checkbox"> Gabryel Borges</li>
+                        <li><input type="checkbox"> Guilherme Thomaz</li>
+                    </ul>
+
+                </form>
+            </div>
+            <div class="warnings subText">
+                <h2 class="textTitulos">Advertências a users</h2>
+                <p class="textTitulos">Id user: #71731273</p>
+                <textarea class="inputsTextAdvertencia"></textarea>
+            </div>
+            <div class="notifications textTitulos">
+                <h2>Enviar nova notificação</h2>
+                <center>
+                    <h1 class="btnNotificacao">+</h1>
+                </center>
             </div>
         </div>
-    </div>
-
+    </main>
 </body>
 
 </html>

@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+body {
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
 /* Contêiner para os cards */
 .card-container {
     display: flex;
@@ -107,6 +111,7 @@
     margin: 10px;
     text-align: justify;
     font-size: small;
+    padding: 10px;
 }
 
 .card-text {
@@ -181,3 +186,114 @@
 #currentPage {
     display: none;
 }
+
+.card-body {
+    position: relative;
+}
+
+.actionButtons {
+    position: absolute;
+    top: 80%;
+    right: 15px;
+    z-index: 10;
+}
+
+.btnEditar:hover .tooltipEditar {
+    visibility: visible;
+}
+
+.btnDownload:hover .tooltipDownload {
+    visibility: visible;
+}
+
+.btnExcluir:hover .tooltipExcluir {
+    visibility: visible;
+}
+
+.tooltipEditar,
+.tooltipDownload,
+.tooltipExcluir {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+    bottom: 200%;
+    left: 50%;
+    margin-left: -60px;
+    display: block;
+    font-size: 13px;
+}
+
+.tooltipEditar::after,
+.tooltipDownload::after,
+.tooltipExcluir::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.btnEditar,
+.btnDownload,
+.btnExcluir {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+.btnDownload {
+    width: 50px;
+    height: 50px;
+}
+
+.btnExcluir {
+    width: 45px;
+    height: 45px;
+    margin-left: -5px;
+}
+
+
+/* Estilização do modal de Sim/Não do JQueryUI */
+.ui-dialog-titlebar {
+    background: #2980b5;
+    border-color: #2980b5;
+    color: white;
+}
+
+.ui-dialog-titlebar-close {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+}
+
+.ui-dialog-titlebar-close::after {
+    content: "X";
+    color: #fff;
+    top: -20%;
+    right: 20%;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.ui-dialog-buttonset button {
+    background-color: #2980b5;
+    border: solid 1px #2980b5;
+    border-radius: 5px;
+    padding: 5px 20px;
+    color: white;
+    font-size: 14px;
+}
+
+/* Fim da estilização do modal de Sim/Não do JQueryUI */

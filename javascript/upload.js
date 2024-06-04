@@ -87,7 +87,9 @@ $(document).ready(function () {
 
     //======= Funções e eventos relacionados ao envio das informações para a API =======//
 
+
     $('#btnEnviar').on('click', function (event) {
+
         event.preventDefault();
         const file = $('#fileInput')[0].files[0];
         if (file) {
@@ -103,13 +105,12 @@ $(document).ready(function () {
                 minute: '2-digit',
                 second: '2-digit'
             }).replace(',', '');
-            var areaCC = $("campo-area-conhecimento");
+
             formData.append('arquivo', file);
             formData.append('area', $("#campo-area-conhecimento").val());
             formData.append('nome', $('#titulo_projeto').val());
             formData.append('dataCriacao', dataFormatada);
             formData.append('resumo', $('#descricao_projeto').val());
-
             $.ajax({
                 url: 'http://localhost:8080/v1/documentos/salvar',
                 type: 'POST',
@@ -117,19 +118,21 @@ $(document).ready(function () {
                 processData: false,
                 contentType: false,
                 success: function (response) {
-                    window.location.replace("http://127.0.0.1:5501/trabalhos.html");
-                    alert('Arquivo enviado com sucesso!');
-
-                    // Redirecionando
+                    $(".modal-body").text("Salvo com sucesso.")
+                    var bol = true;
+                    modalAlert(bol);
                 },
                 error: function (xhr, status, error) {
-                    alert('Erro ao enviar o arquivo.');
-                    console.error(xhr, status, error);
+                    var bol = false;
+                    modalAlert(bol);
+                    $(".modal-body").text("Verifique os campos e tente novamente.")
                 }
             });
         } else {
-            alert('Por favor, selecione um arquivo primeiro.');
+            $('.notificacaoConfirme').modal('show');
+            // alert('Por favor, selecione um arquivo primeiro.');
         }
+
     });
 
     //==================================================================================//
@@ -147,3 +150,34 @@ $(document).ready(function () {
         window.location.href = 'trabalhos.html'; // Substitua 'pagina_anterior.html' pelo URL desejado.
     });
 });
+
+function modalAlert(boolean) {
+
+    $('.notificacaoConfirme').modal('show');
+
+    $(".confirmModalBtn").remove();
+    $(".cancelModalBtn").remove();
+
+    $(".modal-footer").append($("<button>", { class: "btn btn-primary confirmModalBtn", type: "button", text: "Ok" }));
+
+    $('.btn-close').click(function () {
+        $('.notificacaoConfirme').modal('hide'); // Oculta o modal
+    });
+
+    $('.confirmModalBtn').click(function () {
+        $('.notificacaoConfirme').modal('hide'); // Oculta o modal
+        if (boolean) {
+            redirect(true);
+        }
+    });
+
+    $('.cancelModalBtn').click(function () {
+        $('.notificacaoConfirme').modal('hide'); // Oculta o modal
+    });
+}
+
+function redirect(bolean) {
+    if (bolean === true) {
+        window.location.replace("http://127.0.0.1:5501/trabalhos.html");
+    }
+}
