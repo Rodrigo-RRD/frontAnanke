@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+.conteudo-adm {
+    margin-top: 10%;
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 20px;
+    width: calc(100% - 220px);
+    margin-left: 220px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 35px;
+    color: white;
+    font-size: 1.2em;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Added shadow */
+}
+
+.contact-support {
+    background-color: rgb(233, 233, 233);
+    color: red;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.vincular-orientador {
+    background-color: #e74c3c;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.comunicados {
+    background-color: #e74c3c;
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.mural {
+    max-height: 2000px;
+    background-color: #3498db;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.muralImage {
+    margin-left: 20px;
+    max-width: 100px;
+}
+
+.alertas {
+    background-color: #3498db;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.banca {
+    background-color: #e74c3c;
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+.area-conhecimento {
+    background-color: #3498db;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+.conhecimento-img {
+    max-width: 100px;
+}
+
+.novos-concluintes {
+    background-color: #e74c3c;
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+}
+
+.concluintes-img {
+    max-width: 100px;
+}
+
+.arrow {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 1.5em;
+}
+
+.icon {
+    font-size: 3em;
+    margin-top: 10px;
+}

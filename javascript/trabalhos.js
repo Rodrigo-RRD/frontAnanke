@@ -5,7 +5,6 @@ $(document).ready(function () {
 });
 
 function consultarProjetoAPI(page) {
-
     $.ajax({
         url: "http://localhost:8080/v1/projetos/listar",
         type: "get",
