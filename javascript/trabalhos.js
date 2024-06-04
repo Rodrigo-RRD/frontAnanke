@@ -85,7 +85,9 @@ function criarLitaProjetos(response) {
                                         )
                                     ).append(
                                         $("<span>").addClass("tooltipEditar").text("Editar Projeto")
-                                    )
+                                    ).click(function(){
+                                        window.location.replace("http://127.0.0.1:5501/editar_projeto.html?idProjeto=" + projeto.id);
+                                    })
                                 ).append(
                                     $("<button>").addClass("btnExcluir").addClass("btnExcluir" + projeto.id).append(
                                         $("<img>").addClass("imgExcluir").attr(
@@ -137,10 +139,6 @@ $('#btn-next').click(function () {
 $('#btn-prev').click(function () {
     var currentPage = parseInt($('#currentPage').text());
     consultarProjetoAPI(currentPage - 1);
-});
-
-$(".btnExcluir").click(function() {
-    
 });
 
 function msgBoxExcluir(idProjeto){
