@@ -112,3 +112,111 @@ body {
     font-size: 3em;
     margin-top: 10px;
 }
+
+/* Media Queries para responsividade */
+@media (max-width: 1200px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .contact-support {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    .vincular-orientador {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .comunicados {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    .mural {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+
+    .alertas {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+
+    .banca {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+    }
+
+    .area-conhecimento {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+
+    .novos-concluintes {
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
+    }
+}
+
+@media (max-width: 768px) {
+    .conteudo-adm {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 1fr);
+    }
+
+    .contact-support,
+    .vincular-orientador,
+    .comunicados,
+    .mural,
+    .alertas,
+    .banca,
+    .area-conhecimento,
+    .novos-concluintes {
+        grid-column: 1 / 2;
+        grid-row: auto;
+    }
+
+    .muralImage,
+    .conhecimento-img,
+    .concluintes-img {
+        margin-left: 0;
+        max-width: 80px;
+    }
+
+    .item {
+        font-size: 1em;
+        padding: 15px;
+    }
+
+    .icon {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        gap: 5px;
+        padding: 10px;
+    }
+
+    .item {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    .icon {
+        font-size: 1.5em;
+    }
+
+    .arrow {
+        font-size: 1.2em;
+    }
+}

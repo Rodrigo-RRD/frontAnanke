@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-
 .ferramentas-conteudo {
     font-family: "Poppins", Arial, Helvetica, sans-serif;
     margin-top: 10%;
@@ -74,9 +73,11 @@ contabody {
 .meus-projetos {
     background-color: #E54C3C;
 }
-.discussoesIconeImg{
+
+.discussoesIconeImg {
     max-width: 100px;
 }
+
 .calendario-eventosImg {
     max-width: 100px;
 }
@@ -125,16 +126,20 @@ contabody {
     .grid-container {
         grid-template-columns: 1fr;
     }
+
     header {
         flex-direction: column;
         align-items: flex-start;
     }
+
     .header-right {
         flex-direction: column;
         align-items: flex-start;
         margin-top: 10px;
     }
-    .header-right .profile, .header-right .notifications {
+
+    .header-right .profile,
+    .header-right .notifications {
         margin-left: 0;
         margin-top: 10px;
     }
