@@ -13,6 +13,11 @@
     <!-- Logo ananke pagina -->
     <link rel="shortcut icon" type="imagex/png" href="img/LogoBrancoAnanke.png" />
     <link rel="stylesheet" href="css/sidebar.css">
+
+    <!-- Estilos do JQueryUI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+
     <link rel="stylesheet" href="css/trabalhos.css">
 </head>
 
@@ -67,10 +72,17 @@
         <button id="btn-next" class="btn btn-secondary ml-2" disabled>Próxima</button>
     </div>
 
+    <div id="confirmDialog" title="Confirmação" style="display:none;">
+        <p>Tem certeza que deseja excluir este projeto?</p>
+    </div>
+
     <!-- Pasta JS -->
     <script src="javascript/trabalhos.js" defer></script>
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Script para o funcionamento do JQueryUI -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

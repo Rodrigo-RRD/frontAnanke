@@ -250,3 +250,37 @@
     margin-left: -5px;
 }
 
+
+/* Estilização do modal de Sim/Não do JQueryUI */
+.ui-dialog-titlebar{
+    background: #2980b5;
+    border-color: #2980b5;
+    color: white;
+}
+
+.ui-dialog-titlebar-close {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+}
+
+.ui-dialog-titlebar-close::after {
+    content: "X";
+    color: #fff;
+    top: -20%;
+    right: 20%;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.ui-dialog-buttonset button {
+    background-color: #2980b5;
+    border: solid 1px #2980b5;
+    border-radius: 5px;
+    padding: 5px 20px;
+    color: white;
+    font-size: 14px;
+}
+/* Fim da estilização do modal de Sim/Não do JQueryUI */
+

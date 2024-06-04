@@ -29,7 +29,14 @@ function criarLitaProjetos(response) {
     $("#totalPages").text(response.totalPages);
     $("#currentPage").text(response.number);
 
+    let sub = 0;
     $.each(projetos, function (b, projeto) {
+
+        if(projeto.status == 'CANCELADO'){
+            sub++;
+            return;
+        }
+        b = b - sub;
 
         var areaCC = {
             "CIENCIAS_EXATAS_E_TERRA": "Ciências Exatas",
@@ -56,7 +63,7 @@ function criarLitaProjetos(response) {
                                 $("<p>").addClass("card-text").text("Status: " + projeto.status.toLowerCase())
                             ))).append(
                                 $("<div>").addClass("actionButtons").append(
-                                    $("<button>").addClass("btnDownload").addClass("btnDownload" + b).append(
+                                    $("<button>").addClass("btnDownload").addClass("btnDownload" + projeto.id).append(
                                         $("<img>").addClass("imgDownload").attr(
                                             {
                                                 src: "/icons/download.svg",
@@ -65,9 +72,11 @@ function criarLitaProjetos(response) {
                                         )
                                     ).append(
                                         $("<span>").addClass("tooltipDownload").text("Baixar Arquivo")
-                                    )
+                                    ).click(function(){
+                                        baixarArquivo(projeto.id, projeto.nome);
+                                    })
                                 ).append(
-                                    $("<button>").addClass("btnEditar").addClass("btnEditar" + b).append(
+                                    $("<button>").addClass("btnEditar").addClass("btnEditar" + projeto.id).append(
                                         $("<img>").addClass("imgEditar").attr(
                                             {
                                                 src: "/icons/edit.svg",
@@ -78,7 +87,7 @@ function criarLitaProjetos(response) {
                                         $("<span>").addClass("tooltipEditar").text("Editar Projeto")
                                     )
                                 ).append(
-                                    $("<button>").addClass("btnExcluir").addClass("btnExcluir" + b).append(
+                                    $("<button>").addClass("btnExcluir").addClass("btnExcluir" + projeto.id).append(
                                         $("<img>").addClass("imgExcluir").attr(
                                             {
                                                 src: "/icons/trash.svg",
@@ -87,7 +96,9 @@ function criarLitaProjetos(response) {
                                         )
                                     ).append(
                                         $("<span>").addClass("tooltipExcluir").text("Excluir Projeto")
-                                    )
+                                    ).click(function(){
+                                        msgBoxExcluir(projeto.id);
+                                    })
                                 )
                             )
                 ));
@@ -127,3 +138,59 @@ $('#btn-prev').click(function () {
     var currentPage = parseInt($('#currentPage').text());
     consultarProjetoAPI(currentPage - 1);
 });
+
+$(".btnExcluir").click(function() {
+    
+});
+
+function msgBoxExcluir(idProjeto){
+    $("#confirmDialog").dialog({
+      resizable: false,
+      height: "auto",
+      width: 400,
+      modal: true,
+      buttons: {
+        "Sim": function() {
+            $(this).dialog("close");
+            $.ajax({
+                url: 'http://localhost:8080/v1/projetos/deletar/' + idProjeto,
+                type: 'POST',
+                data: null,
+                processData: false,
+                contentType: false,
+                success: function (response) {
+                    window.location.replace("http://127.0.0.1:5501/trabalhos.html");
+                    alert('Projeto excluído com sucesso!');
+                },
+                error: function (xhr, status, error) {
+                    alert('Erro ao excluir o projeto.');
+                    console.error(xhr, status, error);
+                }
+            });
+        },
+        "Não": function() {
+          $(this).dialog("close");
+        }
+      }
+    });
+}
+
+function baixarArquivo(idProjeto, nomeArquivo) {
+    $.ajax({
+        url: 'http://localhost:8080/v1/projetos/download/' + idProjeto,
+        method: "POST",
+        xhr: function() {
+            var xhr = new XMLHttpRequest();
+            xhr.responseType = "blob";
+            return xhr;
+        },
+        success: function(data) {
+            var blob = new Blob([data], {type: "application/octet-stream"});
+            var fileName = nomeArquivo + ".pdf";
+            var link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = fileName;
+            link.click();
+        }
+    });
+}
