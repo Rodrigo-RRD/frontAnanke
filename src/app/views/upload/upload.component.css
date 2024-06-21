@@ -1,0 +1,168 @@
+/* Estilo para a div conteúdo */
+.conteudo {
+    display: grid;
+    /* Usando flexbox para centralizar */
+    align-items: center;
+    /* Alinhando itens verticalmente */
+    justify-content: center;
+    /* Alinhando itens horizontalmente */
+    height: 100vh;
+    /* 100% da altura da tela */
+    background-color: #c9c9c955;
+}
+
+/* Outros estilos permanecem os mesmos */
+.area-upload {
+    background-color: #ffffff;
+    display: flex;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    border-radius: 15px;
+    box-shadow: 1px 1px 15px #0000007F;
+    height: 70vh;
+}
+
+.area-dados {
+    background-color: #2980B5;
+    border-radius: 15px;
+    align-items: start;
+    padding: 10px 40px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.drop_box {
+    margin: 20px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+    width: 50%;
+    border: 3px dotted #c2c2c2;
+}
+
+.drop_box h4 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #2e2e2e;
+}
+
+.drop_box p {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: #a3a3a3;
+}
+
+.drop_box.dragover {
+    border-color: #2980B5;
+    background-color: #2980B522;
+}
+
+
+.btn {
+    text-decoration: none;
+    background-color: #2980B5;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+    border-radius: 20px;
+}
+
+.btn:hover {
+    text-decoration: none;
+    background-color: #2184c2;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    outline: 1px solid #2184c2;
+    cursor: pointer;
+}
+
+.titulo {
+    margin: 20px 0 5px 0px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.esquerdo h3 {
+    font-size: 14px;
+}
+
+.area-dados input {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50px;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.area-dados textarea {
+    border: none;
+    resize: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.input_container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.area-dados input:focus,
+.area-dados textarea:focus {
+    outline: none;
+}
+
+.inputEnviar {
+    max-width: 10rem;
+    color: #fff;
+    background-color: #E54C3C;
+    border-radius: 500px;
+    margin: 0 auto;
+    /* Centraliza o botão */
+    display: block;
+    /* Assegura que o elemento se comporta como um bloco */
+    align-self: center;
+    margin-top: 20px !important;
+}
+
+.file-details {
+    /* display: none; */
+    align-items: center;
+    padding: 10px;
+    max-width: 350px;
+    margin-top: 0px;
+    justify-content: space-between;
+    align-self: center;
+    color: #fff;
+}
+
+.file-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.file-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10px;
+}
+
+.file-name {
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 250px;
+}

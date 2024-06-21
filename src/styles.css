@@ -1,0 +1,5 @@
+/* Reset de margin e padding */
+* {
+    margin: 0;
+    padding: 0;
+}
